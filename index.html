@@ -5,6 +5,12 @@
     <head>
         <meta charset="utf-8"/>
         <link href="https://cdn.prod.website-files.com" rel="preconnect" crossorigin="anonymous"/>
+        <link href="https://player.vimeo.com" rel="preconnect" crossorigin="anonymous"/>
+        <link href="https://i.vimeocdn.com" rel="preconnect" crossorigin="anonymous"/>
+        <link href="https://f.vimeocdn.com" rel="preconnect" crossorigin="anonymous"/>
+        <link href="https://player.vimeo.com" rel="dns-prefetch"/>
+        <link href="https://i.vimeocdn.com" rel="dns-prefetch"/>
+        <link href="https://f.vimeocdn.com" rel="dns-prefetch"/>
         <title>Ratnagar Multispeciality Dental Clinic</title>
         <meta content="Discover beautifully designed, fully customizable Webflow templates that are perfect for creating stunning websites. Whether you&#x27;re building a portfolio, blog, e-commerce site, or landing page, our templates offer endless possibilities to bring your vision to life with ease and flexibility." name="description"/>
         <meta content="Ratnagar Multispeciality Dental Clinic" property="og:title"/>
@@ -41,6 +47,75 @@
                     height: 44px;
                     max-width: 180px;
                 }
+            }
+            .section_hero.has-video-bg {
+                position: relative;
+                overflow: hidden;
+                min-height: 100vh;
+                min-height: 100svh;
+                display: flex;
+                align-items: center;
+                background: linear-gradient(135deg, #0b3d5c 0%, #12586e 50%, #17705f 100%);
+            }
+            .section_hero.has-video-bg .video-hero_bg {
+                position: absolute;
+                top: 0;
+                left: 0;
+                right: 0;
+                bottom: 0;
+                z-index: 0;
+            }
+            .section_hero.has-video-bg .video-hero_bg iframe {
+                position: absolute;
+                top: 50%;
+                left: 50%;
+                width: 177.78vh;
+                height: 56.25vw;
+                min-height: 100%;
+                min-width: 100%;
+                transform: translate(-50%, -50%);
+                pointer-events: none;
+                border: 0;
+            }
+            .section_hero.has-video-bg .video-hero_overlay {
+                position: absolute;
+                inset: 0;
+                z-index: 1;
+                background: linear-gradient(180deg, rgba(0, 0, 0, 0.35) 0%, rgba(0, 0, 0, 0.55) 100%);
+            }
+            .section_hero.has-video-bg > .section-padding {
+                position: relative;
+                z-index: 2;
+                width: 100%;
+            }
+            .section_hero.has-video-bg .home-hero_image-wrap {
+                display: none;
+            }
+            .section_hero.has-video-bg .home-hero_element {
+                display: flex !important;
+                justify-content: center;
+            }
+            .section_hero.has-video-bg .home-hero_content-block {
+                max-width: 760px;
+                width: 100%;
+                margin: 0 auto;
+                text-align: center;
+            }
+            .section_hero.has-video-bg .home-hero_content-block .button-container {
+                display: flex;
+                justify-content: center;
+            }
+            .section_hero.has-video-bg .home-hero_info {
+                justify-content: center;
+            }
+            .section_hero.has-video-bg h1,
+            .section_hero.has-video-bg .home-hero_content p,
+            .section_hero.has-video-bg .home-hero_info,
+            .section_hero.has-video-bg .home-hero_info * {
+                color: #fff;
+            }
+            .section_hero.has-video-bg h1 .text-highlighted {
+                color: #4fd1b3;
             }
         </style>
         <link href="https://fonts.googleapis.com" rel="preconnect"/>
@@ -197,7 +272,11 @@
                 </div>
             </div>
             <main class="main-wrapper">
-                <header class="section_hero">
+                <header class="section_hero has-video-bg">
+                    <div class="video-hero_bg">
+                        <iframe src="https://player.vimeo.com/video/1230204195?background=1&amp;autoplay=1&amp;loop=1&amp;muted=1&amp;controls=0&amp;byline=0&amp;title=0&amp;portrait=0&amp;autopause=0" frameborder="0" loading="eager" fetchpriority="high" allow="autoplay; fullscreen" allowfullscreen title="Ratnagar Multispeciality Dental Clinic" style="opacity:0;transition:opacity .6s ease;" onload="this.style.opacity='1'"></iframe>
+                    </div>
+                    <div class="video-hero_overlay"></div>
                     <div class="section-padding padding-20x20 is-home-hero">
                         <div class="container-main">
                             <div class="home-hero_element">
